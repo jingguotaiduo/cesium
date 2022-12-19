@@ -1,42 +1,41 @@
 # 1、Introduction
-<h>🌈🌈🌈🕺🕺🕺✌️✌️✌️</h>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As we can see, I have to admit that Cesium is powerful and full-function javascript library for who want to develop 2D/3D map、spatial analysis、data exhibition、visualization and so on！</p>
-<p>For the detailed information, please visit <kbd>README-origin.md</kbd></p>
 
-# 2、How to compile and build cesium
+<h>🔔🔔🔔🥪🥪🥪🍔🍔🍔</h>
 
-## 2.1 a series of commands to build
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This project is to help us to <kbd>use the source code of Cesium to load earth on HTML Pages Based on the self-define class library </kbd>! Therefore, we should be excited!</p>
+
+# 2、How to use
+
+## 2.1 build Cesium
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open the terminal console in the folder (cesium-1.89)
 
 <pre>
-<code class="bash">
-npm install gulp --global
+<code class="bash">npm install gulp --global
 npm install
 gulp --tasks
 gulp clean
 gulp build
 gulp release
-node server.js
-</code>
+node server.js</code>
 </pre>
 
-## 2.2 start cesium progranm to run and see the official examples
-Open the Browser, visit the following websites(url):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) [http://localhost:8080/](http://localhost:8080/);<br>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) [Hello world](http://localhost:8080/Apps/HelloWorld.html);<br>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3) [CesiumViewer](http://localhost:8080/Apps/CesiumViewer/index.html);<br>
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4) [Sandcastle](http://localhost:8080/Apps/Sandcastle/index.html)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the built javascript code which can be seen from the source directory, include the following ten folders: Assets、Core、DataSources、Renderer、Scene、Shaders、ThirdParty、Widgets、Workers( can change before build and after build)、WorkersES6.
 
-## 2.3 learn API documentation
-[Cesium Official Documentation](http://localhost:8080/Build/Documentation/index.html) is built by <kbd>JS Doc</kbd>.
+## 2.2 Start Vue Project
 
-## 2.4 Additional Token
-<code>天地图key: 4a00a1dc5387b8ed8adba3374bd87e5e</code><br>
-cesium\Build\CesiumUnminified\Cesium.js和cesium\Source\Core\Ion.js<br>
-<code>Cesium Ion Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0NTkyNGVkMi04YTg1LTQ4YzktYTI3MS05NTNiZWM3MTg2ZGEiLCJpZCI6MjU5LCJpYXQiOjE2NjQ4MTQyODl9.mGZTN2DeKa-mQnQr6BInj8GzOK6wq3dZMwcyU0iwInA</code>
-来源于[Cesium官方沙盒](https://sandcastle.cesium.com/CesiumUnminified/Cesium.js)
- 第48206行<br>
+<pre>
+<code class="bash">vue init webpack test-source-earth
+cd test-source-earth
+npm run dev</code>
+</pre>
 
- [开发者分享的Token](https://blog.csdn.net/josiecici/article/details/120703086)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Copy the above ten folders to test-source-earth/static directory，then visit
+
+[开发者分享的 Token，实测有效，位于 Ion.js](./test-source-earth//static/jjg-source-Earth/Core/Ion.js)
+
  <code>
-    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyMTYyZjIxNC0xNDZiLTRkNmUtYTBmZS00MzZhOGQ4NzJmNzkiLCJpZCI6Njk5MjIsImlhdCI6MTYzMzkxNjU4OX0.NFaUoiLQvq8d6LeSEfCQLIjAEYcYH_dPbqSUFqfsflA';
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyYTU1YjMzOS0wZTdjLTQyNjgtODU1NS05ZjIwMGEzYjIwNzgiLCJpZCI6OTk2ODQsImlhdCI6MTY1NjY1MTM0NX0.oFog3dJt9eNlxyFNJyqxGWmGb73lwnIZL7g3_7KKT0I';
 </code>
+
+Note: The core code is about earth-demo.html、package.json and JZ.js (By jing_zhong, 2022.12.19 ), hope it is helpful to you!

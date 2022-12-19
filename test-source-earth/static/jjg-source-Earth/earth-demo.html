@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cesium-Source-Invoke</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./Widgets/widgets.css">
+	<style>
+		body {
+			display: block;
+			margin: 0px;
+			margin-top: 0px;
+			margin-right: 0px;
+			margin-bottom: 4px;
+			margin-left: 0px;
+			height: 100%;
+			width: 100%;
+		}
+		#cesiumContainer
+		{
+			height: 100%;
+			width: 100%;
+		}
+		.cesium-widget-credits{ 
+		  display:none!important; 
+		  visibility:hide!important; 
+		}
+		.cesium-viewer-toolbar{
+		  display:none!important; 
+		  visibility:hide!important;
+		}
+	</style>
+  </head>
+  <body style="background: #000">
+    <div id="cesiumContainer"></div>
+    <script type="module">
+	     window.CESIUM_BASE_URL = './';
+         import * as JZ from './JZ.js'
+         const viewer = new JZ.Viewer('cesiumContainer', {
+			animation: false, //是否创建动画小器件，左下角仪表
+			baseLayerPicker: false,//是否显示图层选择器,右上角按钮
+			fullscreenButton: false,//是否显示全屏按钮,右下角按钮
+			geocoder: false,//是否显示geocoder小器件，右上角查询按钮
+			homeButton: false,//是否显示Home按钮,右上角按钮
+			infoBox : true,//是否显示信息框，这个还没用到
+			sceneModePicker: false,//是否显示3D/2D选择器 ,右上角按钮
+			selectionIndicator : false,//是否显示选取指示器组件，绿色选中框
+			timeline: false,//是否显示时间轴，底部
+			navigationHelpButton: false,//是否显示帮助按钮，右上角按钮
+			terrainProvider: JZ.createWorldTerrain(),
+		});
+		viewer.scene.globe.depthTestAgainstTerrain = true;
+		const buildingTileset = viewer.scene.primitives.add(JZ.createOsmBuildings());   
+		viewer.camera.flyTo({
+		  destination : JZ.Cartesian3.fromDegrees(116.4175, 39.655, 400),
+		  orientation : {
+			heading : JZ.Math.toRadians(0.0),
+			pitch : JZ.Math.toRadians(-90.0),
+		  }
+		});
+    </script>
+  </body>
+</html>
