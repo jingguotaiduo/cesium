@@ -40,3 +40,8 @@ cesium\Build\CesiumUnminified\Cesium.js和cesium\Source\Core\Ion.js<br>
  <code>
     Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyMTYyZjIxNC0xNDZiLTRkNmUtYTBmZS00MzZhOGQ4NzJmNzkiLCJpZCI6Njk5MjIsImlhdCI6MTYzMzkxNjU4OX0.NFaUoiLQvq8d6LeSEfCQLIjAEYcYH_dPbqSUFqfsflA';
 </code>
+
+
+<code>
+ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlZDJjMTcwNS04ZDVmLTQzNWQtYWUyZC0yMTJkMDkyMzkyMjMiLCJpZCI6MTQ4MiwiaWF0IjoxNjQ4NDQ2OTIwfQ.7e1QUkx_k-mZBxKz9tV8a5TFEorrlLlkfcVNNPzfTQY
+</code>
